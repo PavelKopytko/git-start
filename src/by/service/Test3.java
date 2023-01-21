@@ -2,6 +2,6 @@ package by.service;
 
 public class Test3 {
     public static void main(String[] args) {
-        System.out.println("CONFLICT");
+        System.out.println("no conflict");
     }
 }
