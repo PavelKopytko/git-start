@@ -19,6 +19,7 @@ public class Main {
         ClassA ab = new ClassB();
         System.out.println("a =" + ab.a);
         System.out.println("b =" + ab.b);
-        b.m1();
+        System.out.println("c =" + ab.c);
+        ab.m1();
     }
 }
