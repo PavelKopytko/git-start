@@ -9,15 +9,11 @@ public class Reference {
 
         referenceConstructor();
 
+        referenceInstanceMethod();
 
-        String address = "11522 Shawnee Road, Greenwood DE 19950";
+        referenceInstanceMethodOfObject();
 
-//        Function<String, Integer> indexing = address::indexOf;
-        Function<String, Boolean> indexing = s -> address.contains(s);
 
-        System.out.println(indexing.apply("115"));   // 0
-        System.out.println(indexing.apply("Green")); // 20
-        System.out.println(indexing.apply("Blue"));
     }
 
     private static void referenceStaticMethod() {
@@ -49,6 +45,36 @@ public class Reference {
 
         System.out.println(user);
         System.out.println(user2 + "\n");
+    }
+
+    private static void referenceInstanceMethod() {
+
+        System.out.println("Ссылка на на метод экземпляра объекта имеет вид \n objectName :: instanceMethodName");
+
+        String address = "11522 Shawnee Road, Greenwood DE 19950";
+
+//        Function<String, Integer> indexing = address::indexOf;
+        Function<String, Boolean> indexing = s -> address.contains(s);
+
+        System.out.println(indexing.apply("115"));   // 0
+        System.out.println(indexing.apply("Green")); // 20
+        System.out.println(indexing.apply("Blue"));
+    }
+
+    private static void referenceInstanceMethodOfObject() {
+
+        System.out.println("Ссылка на на метод экземпляра объекта определенного типа" +
+                " имеет вид \n ClassName :: instanceMethodName");
+
+        Function<Long, Double> converter = Long::doubleValue;
+
+        Function<Long, Double> converter2 = val -> val.doubleValue();
+
+        converter.apply(300L); // the result is 300.0d
+        converter.apply(500L); // the result is 500.0d
+
+        System.out.println(converter.apply(300L));   // 0
+        System.out.println(converter.apply(500L)); // 20
     }
 }
 
