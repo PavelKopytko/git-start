@@ -7,10 +7,16 @@ public class ListExample {
 
         List<String> listA = new ArrayList<>();
 
-        listA.add("element 0");
+        listA.add("element 01");
         listA.add("element 1");
-        listA.add("element 2");
+        listA.add("element 222");
         int size = listA.size();
+
+        System.out.println(listA);
+        Collections.sort(listA, (String s1, String s2) -> (Integer.valueOf(s2.length())).compareTo(s1.length()));
+        System.out.println(listA);
+
+        
 
         System.out.println("size = " + size);
 
