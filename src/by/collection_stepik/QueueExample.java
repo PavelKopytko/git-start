@@ -1,5 +1,7 @@
 package by.collection_stepik;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -17,10 +19,11 @@ public class QueueExample {
 
 
 
-        System.out.println("remove " + queue1.remove());
+        System.out.println("remove() " + queue1.remove());
         System.out.println(queue1);
 
-        queue1.element();
+//        queue1.element();
+        System.out.println("element() " + queue1.element());
         System.out.println(queue1);
 
         queue1.peek();
